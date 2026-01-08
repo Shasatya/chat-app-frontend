@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-text-primary));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+  /* here */
+  --bg-primary-from: #818cf8;
+  --bg-primary-to: #a855f7;
+
+  --bg-primary-hover-from: #4f46e5;
+  --bg-primary-hover-to: #7e22ce;
+
+  --bg-secondary-from: #4ade80;
+  --bg-secondary-to: #10b981;
+
+  --bg-secondary-hover-from: #00b74d;
+  --bg-secondary-hover-to: #008f5c;
+}
+
+.text-primary {
+  color: #7e22ce;
+}
+
+.text-secondary {
+  color: #10b981;
+}
+
+.bg-primary {
+  background-image: linear-gradient(to right,
+      var(--bg-primary-from),
+      var(--bg-primary-to));
+}
+
+.bg-primary:hover {
+  background-image: linear-gradient(to right,
+      var(--bg-primary-hover-from),
+      var(--bg-primary-hover-to));
+}
+
+.bg-secondary {
+  background-image: linear-gradient(to right,
+      var(--bg-secondary-from),
+      var(--bg-secondary-to));
+}
+
+.bg-secondary:hover {
+  background-image: linear-gradient(to right,
+      var(--bg-secondary-hover-from),
+      var(--bg-secondary-hover-to));
+}
+
+
+
+
+/* --color-background-light: #ffffff;
+    --color-surface-light: #f9fafb;
+    --color-surface-secondary-light: #f3f4f6;
+    --color-accent-light: #6366f1;
+    --color-accent-hover-light: #4f46e5;
+    --color-accent-secondary-light: #9333ea;
+    --color-text-primary-light: #111827;
+    --color-text-secondary-light: #6b7280;
+    --color-success-light: #22c55e;
+    --color-warning-light: #f59e0b;
+    --color-error-light: #ef4444;
+    --color-border-light: #e5e7eb;
+    --color-border-focus-light: #6366f1;
+
+    --color-background-dark: #111827;
+    --color-surface-dark: #1f2937;
+    --color-surface-secondary-dark: #374151;
+    --color-accent-dark: #818cf8;
+    --color-accent-hover-dark: #6366f1;
+    --color-accent-secondary-dark: #a855f7;
+    --color-text-primary-dark: #f3f4f6;
+    --color-text-secondary-dark: #9ca3af;
+    --color-success-dark: #4ade80;
+    --color-warning-dark: #fbbf24;
+    --color-error-dark: #f87171;
+    --color-border-dark: #374151;
+    --color-border-focus-dark: #818cf8;
+
+    --color-message-sent-light: #6366f1;
+    --color-message-sent-secondary-light: #9333ea;
+    --color-message-sent-text-light: #ffffff;
+    --color-message-received-light: #ffffff;
+    --color-message-received-text-light: #111827;
+    --color-message-received-border-light: #e5e7eb;
+
+    --color-message-sent-dark: #6366f1;
+    --color-message-sent-secondary-dark: #9333ea;
+    --color-message-sent-text-dark: #ffffff;
+    --color-message-received-dark: #1f2937;
+    --color-message-received-text-dark: #f3f4f6;
+    --color-message-received-border-dark: #374151;
+
+    --color-avatar-indigo-from: #818cf8;
+    --color-avatar-indigo-to: #a855f7;
+    --color-avatar-blue-from: #60a5fa;
+    --color-avatar-blue-to: #6366f1;
+    --color-avatar-purple-from: #c084fc;
+    --color-avatar-purple-to: #ec4899;
+    --color-avatar-green-from: #4ade80;
+    --color-avatar-green-to: #10b981;
+    --color-avatar-pink-from: #f472b6;
+    --color-avatar-pink-to: #ec4899;
+
+    --color-status-online: #22c55e;
+    --color-status-offline: #9ca3af;
+    --color-status-away: #f59e0b;
+    --color-status-busy: #ef4444; */
