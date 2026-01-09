@@ -111,45 +111,6 @@ const AllUsers = () => {
         ))}
       </div>
     </div>
-
-    // <div className="flex-1 flex flex-col bg-white border-r border-gray-200">
-    //   <div className="px-4 h-16 border-b border-gray-200 bg-linear-to-r from-gray-50 to-white flex items-center">
-    //     <h2 className="font-bold text-xl text-gray-900">Find People</h2>
-    //   </div>
-
-    //   <div className="p-4 border-b border-gray-100">
-    //     <div className="relative">
-    //       <Search
-    //         className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-    //         size={18}
-    //       />
-    //       <input
-    //         className="w-full pl-10 pr-4 py-2.5 bg-gray-100 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all duration-200 text-sm"
-    //         placeholder="Search users..."
-    //         value={searchQuery}
-    //         onChange={(e) => handleSearchUsers(e.target.value)}
-    //       />
-    //     </div>
-    //   </div>
-
-    //   <div className="flex-1 overflow-y-auto">
-    //     {searchResults.map((u) => (
-    //       <div
-    //         key={u?.id}
-    //         className="p-4 border-b border-gray-100 flex justify-between items-center hover:bg-gray-50 transition-all duration-200"
-    //       >
-    //         <div className="flex justify-between items-center gap-3">
-    //           <AvatarIcon
-    //             name={u?.username}
-    //             photo={u?.avatar ? u?.avatar : null}
-    //           />
-    //           <span className="font-semibold text-gray-900">{u?.username}</span>
-    //         </div>
-    //         <div>{getButtonType(u?.status, u?.username, u?.id)}</div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
   );
 };
 

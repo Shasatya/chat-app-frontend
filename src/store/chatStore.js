@@ -12,13 +12,13 @@ const useChatStore = create((set, get) => ({
   onlineUsers: new Set(),
 
   setActiveTab: (tab) => set({ activeTab: tab }),
-  setActiveChat: (chat) => set({ activeChat: chat, messages: [] }),
+  setActiveChat: (chat) => set({ activeChat: chat, messages: [] }), 
   addMessage: (msg) =>
     set((state) => {
       if (state.activeChat && state.activeChat.id === msg.conversationId) {
         return { messages: [...state.messages, msg] };
       }
-      return state;
+      return state; 
     }),
   setOnlineUsers: (userIds) => set({ onlineUsers: new Set(userIds) }),
 
@@ -74,7 +74,7 @@ const useChatStore = create((set, get) => ({
       const chat = get().conversations.find((c) => c.id === data.id);
 
       if (chat) {
-        set({ activeChat: chat, activeTab: "chats" });
+        set({ activeChat: chat, activeTab: "chats" }); 
         get().fetchChatHistory(chat.id);
       }
     } catch (e) {
@@ -88,8 +88,8 @@ const useChatStore = create((set, get) => ({
         name,
         participantIds: friendIds,
       });
-      await get().fetchConversations();
-      return data.id;
+      await get().fetchConversations(); 
+      return data.id; 
     } catch (e) {
       alert("Failed to create group", e);
     }
@@ -99,7 +99,7 @@ const useChatStore = create((set, get) => ({
     set((state) => {
       const newOnline = new Set(state.onlineUsers);
       if (status === "online") {
-        newOnline.add(userId.toString());
+        newOnline.add(userId.toString()); 
       } else {
         newOnline.delete(userId.toString());
       }

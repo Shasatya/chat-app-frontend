@@ -2,220 +2,273 @@
     @import "tailwindcss";
 
     * {
-      font-family: 'Poppins', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     html,
     body {
-      height: 100%;
+        height: 100%;
     }
 
     body {
-      margin: 0;
-      background-color: var(--bg-body);
-      color: var(--text-primary);
-      transition: background-color 0.3s ease, color 0.3s ease;
+        margin: 0;
+        background-color: var(--bg-body);
+        color: var(--text-primary);
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     :root {
-      --primary-color: #6366f1;
-      --primary-hover: #4f46e5;
+        --primary-color: #6366f1;
+        /* indigo-500 */
+        --primary-hover: #4f46e5;
+        /* indigo-600 */
 
-      --bg-body: #ffffff;
+        /* --- Backgrounds --- */
+        --bg-body: #ffffff;
+        /* Added this for main body bg */
+        --bg-auth-gradient: linear-gradient(to bottom right, #f8fafc, #eff6ff, #eef2ff);
+        --bg-sidebar-gradient: linear-gradient(to bottom, #111827, #111827, #030712);
+        /* Dark by default */
+        --bg-header-gradient: linear-gradient(to right, #f9fafb, #ffffff);
 
-      --bg-auth-gradient: linear-gradient(to bottom right, #f8fafc, #eff6ff, #eef2ff);
-      --bg-sidebar-gradient: linear-gradient(to bottom, #111827, #111827, #030712);
-      --bg-header-gradient: linear-gradient(to right, #f9fafb, #ffffff);
+        /* Chat Areas */
+        --bg-surface: #ffffff;
+        --bg-chat-list: #ffffff;
+        --bg-chat-hover: #f9fafb;
+        --bg-message-bar: #f0f2f5;
 
-      --bg-surface: #ffffff;
-      --bg-chat-list: #ffffff;
-      --bg-chat-hover: #f9fafb;
-      --bg-message-bar: #f0f2f5;
+        /* Active Chat Item */
+        --bg-chat-active-from: #eef2ff;
+        --bg-chat-active-to: #faf5ff;
 
-      --bg-chat-active-from: #eef2ff;
-      --bg-chat-active-to: #faf5ff;
+        /* --- Text Colors --- */
+        --text-primary: #111827;
+        /* gray-900 */
+        --text-secondary: #374151;
+        /* gray-700 */
+        --text-body: #4b5563;
+        /* gray-600 */
+        --text-muted: #6b7280;
+        /* gray-500 */
+        --text-faint: #9ca3af;
+        /* gray-400 */
 
-      --text-primary: #111827;
-      --text-secondary: #374151;
-      --text-body: #4b5563;
-      --text-muted: #6b7280;
-      --text-faint: #9ca3af;
+        /* --- Sidebar Specific (Dark Theme Context) --- */
+        --sidebar-text: #9ca3af;
+        --sidebar-text-active: #ffffff;
+        --sidebar-hover-bg: #1f2937;
+        --sidebar-border: #1f2937;
 
-      --sidebar-text: #9ca3af;
-      --sidebar-text-active: #ffffff;
-      --sidebar-hover-bg: #1f2937;
-      --sidebar-border: #1f2937;
+        /* --- Borders & Dividers --- */
+        --border-light: #e5e7eb;
+        /* gray-200 */
+        --border-subtle: #f3f4f6;
+        /* gray-100 */
 
-      --border-light: #e5e7eb;
-      --border-subtle: #f3f4f6;
+        /* --- Shadows --- */
+        --shadow-soft: 0 4px 6px -1px rgba(199, 210, 254, 0.5);
+        --shadow-deep: 0 10px 15px -3px rgba(49, 46, 129, 0.5);
 
-      --shadow-soft: 0 4px 6px -1px rgba(199, 210, 254, 0.5);
-      --shadow-deep: 0 10px 15px -3px rgba(49, 46, 129, 0.5);
-
-      --bg-primary-from: #818cf8;
-      --bg-primary-to: #a855f7;
-      --bg-primary-hover-from: #4f46e5;
-      --bg-primary-hover-to: #7e22ce;
+        /* Gradients */
+        --bg-primary-from: #818cf8;
+        --bg-primary-to: #a855f7;
+        --bg-primary-hover-from: #4f46e5;
+        --bg-primary-hover-to: #7e22ce;
     }
 
+    /* =========================================
+    DARK MODE OVERRIDES
+    ========================================= */
     html.dark {
-      --bg-body: #0f172a;
+        /* --- Backgrounds --- */
+        --bg-body: #0f172a;
+        /* slate-900 */
+        --bg-auth-gradient: linear-gradient(to bottom right, #020617, #0f172a, #1e1b4b);
 
-      --bg-auth-gradient: linear-gradient(to bottom right, #020617, #0f172a, #1e1b4b);
-      --bg-header-gradient: linear-gradient(to right, #111827, #1f2937);
+        /* Sidebar remains the same as it was already dark */
 
-      --bg-surface: #1e293b;
-      --bg-chat-list: #111827;
-      --bg-chat-hover: #1f2937;
-      --bg-message-bar: #374151;
+        --bg-header-gradient: linear-gradient(to right, #111827, #1f2937);
+        /* gray-900 -> gray-800 */
 
-      --bg-chat-active-from: #312e81;
-      --bg-chat-active-to: #4c1d95;
+        /* Chat Areas */
+        --bg-surface: #1e293b;
+        /* slate-800 (Cards/Modals) */
+        --bg-chat-list: #111827;
+        /* gray-900 (Main List BGs) */
+        --bg-chat-hover: #1f2937;
+        /* gray-800 */
+        --bg-message-bar: #374151;
+        /* gray-700 */
 
-      --text-primary: #f8fafc;
-      --text-secondary: #e2e8f0;
-      --text-body: #cbd5e1;
-      --text-muted: #94a3b8;
-      --text-faint: #64748b;
+        /* Active Chat Item (Darker Indigo) */
+        --bg-chat-active-from: #312e81;
+        /* indigo-900 */
+        --bg-chat-active-to: #4c1d95;
+        /* violet-900 */
 
-      --border-light: #374151;
-      --border-subtle: #1f2937;
+        /* --- Text Colors --- */
+        --text-primary: #f8fafc;
+        /* slate-50 (White-ish) */
+        --text-secondary: #e2e8f0;
+        /* slate-200 */
+        --text-body: #cbd5e1;
+        /* slate-300 */
+        --text-muted: #94a3b8;
+        /* slate-400 */
+        --text-faint: #64748b;
+        /* slate-500 */
 
-      --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-      --shadow-deep: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        /* --- Borders & Dividers --- */
+        --border-light: #374151;
+        /* gray-700 */
+        --border-subtle: #1f2937;
+        /* gray-800 */
+
+        /* --- Shadows --- */
+        /* Dark mode shadows are usually more subtle or just black */
+        --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        --shadow-deep: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
     }
+
+
+    /* =========================================
+    UTILITY CLASSES (Unchanged)
+    ========================================= */
 
     .bg-primary {
-      background-image: linear-gradient(to right, var(--bg-primary-from), var(--bg-primary-to));
+        background-image: linear-gradient(to right, var(--bg-primary-from), var(--bg-primary-to));
     }
 
     .bg-primary:hover {
-      background-image: linear-gradient(to right, var(--bg-primary-hover-from), var(--bg-primary-hover-to));
+        background-image: linear-gradient(to right, var(--bg-primary-hover-from), var(--bg-primary-hover-to));
     }
 
     .bg-auth {
-      background: var(--bg-auth-gradient);
+        background: var(--bg-auth-gradient);
     }
 
     .bg-sidebar {
-      background: var(--bg-sidebar-gradient);
-      border-right: 1px solid var(--sidebar-border);
+        background: var(--bg-sidebar-gradient);
+        border-right: 1px solid var(--sidebar-border);
     }
 
     .bg-header {
-      background: var(--bg-header-gradient);
-      border-bottom: 1px solid var(--border-light);
+        background: var(--bg-header-gradient);
+        border-bottom: 1px solid var(--border-light);
     }
 
     .text-primary {
-      color: #7e22ce;
+        color: #7e22ce;
+        /* This might need a dark mode variable if readability is poor, but kept for now */
     }
 
+    /* Specific override for text-primary in dark mode if needed */
     html.dark .text-primary {
-      color: #a855f7;
+        color: #a855f7;
+        /* Lighter purple for dark bg */
     }
 
     .card-surface {
-      background-color: var(--bg-surface);
-      box-shadow: var(--shadow-soft);
+        background-color: var(--bg-surface);
+        box-shadow: var(--shadow-soft);
     }
 
     .sidebar-item {
-      color: var(--sidebar-text);
-      transition: all 0.2s;
+        color: var(--sidebar-text);
+        transition: all 0.2s;
     }
 
     .sidebar-item:hover {
-      background-color: var(--sidebar-hover-bg);
-      color: var(--sidebar-text-active);
-      transform: scale(1.05);
+        background-color: var(--sidebar-hover-bg);
+        color: var(--sidebar-text-active);
+        transform: scale(1.05);
     }
 
     .sidebar-item.active {
-      background-image: linear-gradient(to right, #818cf8, #a855f7);
-      color: white;
-      box-shadow: var(--shadow-deep);
+        background-image: linear-gradient(to right, #818cf8, #a855f7);
+        color: white;
+        box-shadow: var(--shadow-deep);
     }
 
     .input-primary {
-      background-color: var(--bg-surface);
-      border: 1px solid var(--border-light);
-      color: var(--text-primary);
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-light);
+        color: var(--text-primary);
     }
 
     .input-primary:focus {
-      outline: none;
-      border-color: transparent;
-      box-shadow: 0 0 0 2px var(--primary-color);
+        outline: none;
+        border-color: transparent;
+        box-shadow: 0 0 0 2px var(--primary-color);
     }
 
     .message-bar {
-      background-color: var(--bg-message-bar);
+        background-color: var(--bg-message-bar);
     }
 
     .chat-item {
-      border-bottom: 1px solid var(--border-subtle);
-      background-color: var(--bg-chat-list);
-      transition: background-color 0.2s;
+        border-bottom: 1px solid var(--border-subtle);
+        background-color: var(--bg-chat-list);
+        transition: background-color 0.2s;
     }
 
     .chat-item:hover {
-      background-color: var(--bg-chat-hover);
+        background-color: var(--bg-chat-hover);
     }
 
     .chat-item.active {
-      background-image: linear-gradient(to right, var(--bg-chat-active-from), var(--bg-chat-active-to));
-      border-left: 4px solid var(--primary-color);
+        background-image: linear-gradient(to right, var(--bg-chat-active-from), var(--bg-chat-active-to));
+        border-left: 4px solid var(--primary-color);
     }
 
     .bubble-me {
-      background-color: var(--bg-surface);
-      color: var(--text-primary);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        background-color: var(--bg-surface);
+        color: var(--text-primary);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
     .bubble-typing {
-      background-color: var(--bg-surface);
-      color: var(--text-muted);
+        background-color: var(--bg-surface);
+        color: var(--text-muted);
     }
 
     .text-main {
-      color: var(--text-primary);
+        color: var(--text-primary);
     }
 
     .text-label {
-      color: var(--text-secondary);
+        color: var(--text-secondary);
     }
 
     .text-sub {
-      color: var(--text-body);
+        color: var(--text-body);
     }
 
     .text-muted {
-      color: var(--text-muted);
+        color: var(--text-muted);
     }
 
     .text-faint {
-      color: var(--text-faint);
+        color: var(--text-faint);
     }
 
     .icon-action {
-      color: var(--primary-color);
-      transition: all 0.2s;
-      border-radius: 0.75rem;
+        color: var(--primary-color);
+        transition: all 0.2s;
+        border-radius: 0.75rem;
     }
 
     .icon-action:hover {
-      background-color: var(--bg-chat-active-from);
-      transform: scale(1.1);
+        background-color: var(--bg-chat-active-from);
+        transform: scale(1.1);
     }
 
     .icon-attach {
-      color: var(--text-muted);
-      border-radius: 0.75rem;
-      transition: background-color 0.2s;
+        color: var(--text-muted);
+        border-radius: 0.75rem;
+        transition: background-color 0.2s;
     }
 
     .icon-attach:hover {
-      background-color: var(--border-light);
+        background-color: var(--border-light);
     }

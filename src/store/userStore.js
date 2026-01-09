@@ -48,7 +48,7 @@ const useUserStore = create((set) => ({
 
       set({ user: updatedUser });
 
-      return true;
+      return true; 
     } catch (e) {
       console.error("Avatar upload failed:", e);
       return false;
