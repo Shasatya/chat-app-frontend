@@ -5,6 +5,9 @@ export default function ThemeManager() {
   const theme = useThemeStore((state) => state.theme);
 
   useEffect(() => {
+
+    console.log("theme ", theme)
+
     const root = document.documentElement;
 
     if (theme === "dark") {
