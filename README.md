@@ -83,13 +83,13 @@ frontend/
 ├── public/
 ├── src/
 │   ├── components/      # React components
-│   ├── lib/             # Utilities and helpers
-│   ├── pages/           # Page components
-│   ├── store/           # Zustand stores
-│   ├── App.css          # Global styles
-│   ├── App.jsx          # Main app component
-│   └── main.jsx         # Entry point
-├── .env                 # Environment variables
+│   ├── lib/                # Utilities and helpers
+│   ├── pages/              # Page components
+│   ├── store/              # Zustand stores
+│   ├── App.css             # Global styles
+│   ├── App.jsx             # Main app component
+│   └── main.jsx            # Entry point
+├── .env                    # Environment variables
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html           # HTML template
