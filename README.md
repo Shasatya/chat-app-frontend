@@ -78,7 +78,7 @@ A modern React frontend for real-time chat built with Vite, Tailwind CSS, and So
 ## Project Structure
 
 ```
-frontend/
+chat-app-frontend/
 ├── node_modules/
 ├── public/
 ├── src/
